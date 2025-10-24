@@ -3,7 +3,7 @@ pre-commit:
   commands:
     biome:
       priority: 1
-      glob: "*.{js,ts,cjs,mjs,jsx,tsx,json,jsonc,md,mdx,yml,yaml,css,html}"
+      glob: "*.{js,ts,cjs,mjs,jsx,tsx,json,jsonc}"
       run: |
         pnpm biome check {staged_files} --write
       stage_fixed: true
@@ -26,3 +26,9 @@ post-merge:
     pnpm:
       glob: "{package.json,pnpm-lock.yaml}"
       run: pnpm install
+
+commit-msg:
+  commands:
+    commitlint:
+      run: |
+        pnpm commitlint --edit {1}
