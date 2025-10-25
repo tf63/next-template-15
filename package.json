@@ -1,4 +1,5 @@
 {
+	"type": "module",
 	"name": "next-template-15",
 	"version": "0.1.0",
 	"private": true,
@@ -24,7 +25,6 @@
 		"@biomejs/biome": "2.2.4",
 		"@chromatic-com/storybook": "4.1.1",
 		"@commitlint/cli": "19.8.1",
-		"@commitlint/config-conventional": "19.8.1",
 		"@storybook/addon-a11y": "9.1.5",
 		"@storybook/addon-docs": "9.1.5",
 		"@storybook/addon-links": "9.1.5",
