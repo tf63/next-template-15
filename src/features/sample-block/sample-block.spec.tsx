@@ -1,9 +1,9 @@
-import { composeStories } from "@storybook/react"
-import * as stories from "./sample-block.stories"
+import { render } from "@testing-library/react"
+import { describe, it } from "vitest"
+import { SampleBlock } from "./sample-block"
 
-stories.default.decorators = []
-const { Default } = composeStories(stories)
-
-test("renders SampleBlock component", async () => {
-	await Default.run()
+describe("SampleBlock", () => {
+	it("renders SampleBlock component", () => {
+		render(<SampleBlock />)
+	})
 })
