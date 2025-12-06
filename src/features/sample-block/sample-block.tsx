@@ -1,4 +1,4 @@
-import { SampleCard } from "../sample-card"
+import { SampleCard } from "../sample-card/sample-card"
 
 type SampleBlockProps = object
 
