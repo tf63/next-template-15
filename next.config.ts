@@ -1,7 +1,11 @@
 import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-	/* config options here */
+	// output: "standalone",
+	devIndicators: false,
+	typescript: {
+		tsconfigPath: "tsconfig.build.json",
+	},
 }
 
 export default nextConfig
