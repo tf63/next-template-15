@@ -55,7 +55,7 @@
 				"useHookAtTopLevel": "error",
 				"noEmptyPattern": "off"
 			},
-			"performance": { "recommended": true },
+			"performance": { "recommended": true, "noBarrelFile": "error" },
 			"security": { "recommended": true },
 			"style": {
 				"recommended": true,
