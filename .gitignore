@@ -67,3 +67,6 @@ test-results/
 blob-report/
 playwright-report/
 playwright/.cache/
+
+# kiri
+.kiri/
