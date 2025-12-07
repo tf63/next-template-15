@@ -6,7 +6,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 })
 
 const nextConfig: NextConfig = {
-	// output: "standalone",
+	output: "standalone",
 	devIndicators: false,
 	typescript: {
 		tsconfigPath: "tsconfig.build.json",
