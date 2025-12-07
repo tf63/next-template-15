@@ -6,6 +6,7 @@
 	"scripts": {
 		"dev": "next dev --turbopack",
 		"build": "next build",
+		"build:analyze": "ANALYZE=true next build",
 		"storybook": "storybook dev -p 6006 --no-open",
 		"storybook:build": "storybook build",
 		"start": "next start",
@@ -47,6 +48,7 @@
 		"@types/react": "19.2.1",
 		"@types/react-dom": "19.2.1",
 		"@vitejs/plugin-react": "5.1.1",
+		"@next/bundle-analyzer": "15.5.7",
 		"jsdom": "27.2.0",
 		"lefthook": "1.13.0",
 		"plop": "4.0.4",
