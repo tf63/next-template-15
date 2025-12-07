@@ -1,10 +1,11 @@
 "use server"
 
 import { redirect } from "next/navigation"
+import type { SampleFormData } from "@/features/sample/lib/validation"
 import type { FormResult } from "@/types"
 
-export async function sampleFormAction(): Promise<FormResult> {
-	await new Promise((resolve) => setTimeout(resolve, 1000))
+export async function sampleFormAction(_prevState: FormResult, _formData: SampleFormData): Promise<FormResult> {
+	await new Promise((resolve) => setTimeout(resolve, 500))
 
 	if (Math.random() > 0.5) {
 		return {
@@ -13,5 +14,5 @@ export async function sampleFormAction(): Promise<FormResult> {
 		}
 	}
 
-	redirect("/sign-in")
+	redirect("/")
 }

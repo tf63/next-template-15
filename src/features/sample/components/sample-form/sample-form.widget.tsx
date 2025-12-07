@@ -8,7 +8,7 @@ import { sampleFormAction } from "@/features/sample/actions/sample-form-action"
 import { type SampleFormData, sampleFormSchema } from "@/features/sample/lib/validation"
 import type { FormResult } from "@/types"
 
-export function SampleFormContainer() {
+export function SampleFormWidget() {
 	const [state, formAction, isPending] = useActionState<FormResult, SampleFormData>(sampleFormAction, {
 		ok: null,
 		message: "",
