@@ -4,10 +4,8 @@ import { SampleBlock } from "./sample-block"
 type SampleBlockType = typeof SampleBlock
 
 export default {
-	title: "SampleBlock",
+	title: "Sample/SampleBlock",
 	component: SampleBlock,
-	render: (props) => <SampleBlock {...props} />,
-	decorators: [(Story) => <Story />],
 } satisfies Meta<SampleBlockType>
 
 export const Default: StoryObj<SampleBlockType> = {

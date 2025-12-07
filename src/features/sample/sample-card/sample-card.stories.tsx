@@ -4,12 +4,12 @@ import { SampleCard } from "./sample-card"
 type SampleCardType = typeof SampleCard
 
 export default {
-	title: "SampleCard",
+	title: "Sample/SampleCard",
 	component: SampleCard,
-	render: (props) => <SampleCard {...props} />,
-	decorators: [(Story) => <Story />],
 } satisfies Meta<SampleCardType>
 
 export const Default: StoryObj<SampleCardType> = {
-	args: { text: "SampleCard Component" },
+	args: {
+		text: "SampleCard Component",
+	},
 }
