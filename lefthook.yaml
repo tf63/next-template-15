@@ -1,8 +1,17 @@
 pre-commit:
   piped: true
   commands:
-    biome:
+    typecheck:
       priority: 1
+      glob: "*.{ts,tsx}"
+      run: |
+        pnpm typecheck
+      skip:
+        - merge
+        - rebase
+
+    biome:
+      priority: 2
       glob: "*.{js,ts,cjs,mjs,jsx,tsx,json,jsonc}"
       run: |
         pnpm biome check {staged_files} --write
@@ -12,7 +21,7 @@ pre-commit:
         - rebase
 
     prettier:
-      priority: 2
+      priority: 3
       glob: "*.{md,mdx,yml,yaml,css,html}"
       run: |
         pnpm prettier {staged_files} --write
