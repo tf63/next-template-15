@@ -1,4 +1,4 @@
-import { SampleBlock } from "../features/sample/sample-block/sample-block"
+import { SampleBoardContainer } from "@/features/sample/sample-board/sample-board.container"
 
 export default function Page() {
 	return (
@@ -6,7 +6,7 @@ export default function Page() {
 			<h1 className="text-2xl font-bold">Hello, Next.js!</h1>
 			<p className="text-foreground">This is a sample page using Tailwind CSS.</p>
 
-			<SampleBlock />
+			<SampleBoardContainer />
 		</main>
 	)
 }
