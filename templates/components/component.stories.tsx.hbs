@@ -1,13 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { {{pascalCase (extractFilename path)}} } from "./{{kebabCase (extractFilename path)}}"
 
-type {{pascalCase (extractFilename path)}}Type = typeof {{pascalCase (extractFilename path)}}
-
 export default {
-	title: "{{pascalCase (extractFilename path)}}",
+	title: "{{pascalCase (extractComponentPrefix path)}}/{{pascalCase (extractFilename path)}}",
 	component: {{pascalCase (extractFilename path)}},
-} satisfies Meta<{{pascalCase (extractFilename path)}}Type>
+} satisfies Meta<typeof {{pascalCase (extractFilename path)}}>
 
-export const Default: StoryObj<{{pascalCase (extractFilename path)}}Type> = {
+type StoryType = StoryObj<typeof {{pascalCase (extractFilename path)}}> & {
+	args: React.ComponentProps<typeof {{pascalCase (extractFilename path)}}>
+}
+
+export const Default: StoryType = {
 	args: {},
 }
