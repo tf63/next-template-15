@@ -1,3 +1,5 @@
+import { SampleBoardHeader } from "@/features/sample/sample-board/sample-board-header/sample-board-header"
+
 type Props = {
 	buttonElement: React.ReactNode
 	text: string
@@ -5,7 +7,8 @@ type Props = {
 
 export function SampleBoard({ buttonElement, text }: Props) {
 	return (
-		<div className="flex flex-col gap-2">
+		<div className="flex flex-col gap-2 max-w-sm">
+			<SampleBoardHeader text="This is Header" />
 			<p>{text}</p>
 			{buttonElement}
 		</div>
