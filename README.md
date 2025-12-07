@@ -68,12 +68,6 @@ pnpm install
 | --------------- | ------------------------- |
 | `pnpm generate` | Generate component (plop) |
 
-### Setup
-
-| Command        | Description                  |
-| -------------- | ---------------------------- |
-| `pnpm prepare` | Install Git hooks (Lefthook) |
-
 ## Visual Regression Testing with Playwright and Storybook
 
 ### Setup
