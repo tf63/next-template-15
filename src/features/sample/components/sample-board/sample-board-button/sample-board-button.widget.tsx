@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import { SampleButton } from "@/features/sample/sample-button/sample-button"
+import { SampleButton } from "@/features/sample/components/sample-button/sample-button"
 
 type Props = {
 	label: string

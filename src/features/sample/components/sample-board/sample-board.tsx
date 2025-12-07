@@ -1,4 +1,4 @@
-import { SampleBoardHeader } from "@/features/sample/sample-board/sample-board-header/sample-board-header"
+import { SampleBoardHeader } from "./sample-board-header/sample-board-header"
 
 type Props = {
 	buttonElement: React.ReactNode

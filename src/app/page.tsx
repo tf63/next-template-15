@@ -1,4 +1,4 @@
-import { SampleBoardContainer } from "@/features/sample/sample-board/sample-board.container"
+import { SampleBoardContainer } from "@/features/sample/components/sample-board/sample-board.container"
 
 export default function Page() {
 	return (
