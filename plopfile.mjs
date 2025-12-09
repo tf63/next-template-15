@@ -22,7 +22,7 @@ export default (plop) => {
 				type: "list",
 				name: "type",
 				message: "Please select the component type",
-				choices: ["src/features", "src/components"],
+				choices: ["src/features/components", "src/components"],
 			},
 			{
 				type: "input",

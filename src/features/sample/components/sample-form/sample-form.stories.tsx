@@ -1,8 +1,8 @@
-import { zodResolver } from "@hookform/resolvers/zod/src/index.js"
+import { zodResolver } from "@hookform/resolvers/zod"
 import type { Meta, StoryObj } from "@storybook/react"
 import { useForm } from "react-hook-form"
-import { SampleForm } from "./sample-form"
 import { type SampleFormData, sampleFormSchema } from "@/features/sample/lib/validation"
+import { SampleForm } from "./sample-form"
 
 export default {
 	title: "Sample/SampleForm",
