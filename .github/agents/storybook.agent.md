@@ -32,7 +32,7 @@ some-component/
 ## CSF 3.0に従う
 
 ```tsx
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from "@storybook/nextjs-vite"
 import { Button } from "./button"
 
 export default {
