@@ -1,12 +1,36 @@
+import fs from "node:fs"
+import path from "node:path"
+import { fileURLToPath } from "node:url"
 import { expect, test } from "@playwright/test"
-import stories from "../test-results/storybook-static/index.json"
+
+interface StoryEntry {
+	id: string
+	title: string
+	name: string
+	type: "story" | "docs" | string
+}
+
+interface StoryIndexJson {
+	entries: Record<string, StoryEntry>
+}
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+const jsonPath = path.resolve(__dirname, "../test-results/storybook-static/index.json")
+
+let stories: StoryIndexJson = { entries: {} }
+
+if (fs.existsSync(jsonPath)) {
+	stories = JSON.parse(fs.readFileSync(jsonPath, "utf8")) as StoryIndexJson
+}
 
 const storyInfos = Object.values(stories.entries)
-	.filter(({ type }) => type === "story")
-	.map((story) => ({
-		id: story.id,
-		title: story.title,
-		name: story.name,
+	.filter((s) => s.type === "story")
+	.map((s) => ({
+		id: s.id,
+		title: s.title,
+		name: s.name,
 	}))
 
 for (const story of storyInfos) {

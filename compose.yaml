@@ -27,5 +27,5 @@ services:
     stdin_open: true
     volumes:
       - ./tests/test-results:/work/tests/test-results
-      - ./tests/vrt:/work/tests/vrt
+      - ./tests/vrt/storybook-visual.spec.ts:/work/tests/vrt/storybook-visual.spec.mts
       - ./playwright.vrt.config.ts:/work/playwright.config.ts
